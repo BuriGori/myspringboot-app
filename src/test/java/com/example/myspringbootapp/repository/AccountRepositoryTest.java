@@ -42,5 +42,14 @@ public class AccountRepositoryTest {
 
         Account acct = accountRepository.findById(11L).orElse(new Account());
         log.info("new Account hear => {}",acct);
+
+        //orElseGet(Supplier sup)
+        //Supplier 의 추상매서드 T get()
+        Account acct2 = accountRepository.findById(2L).orElseGet(()-> new Account());
+        log.info("acct2 = {}",acct2);
+
+        //orElseThrow( Throeable X )
+        Account acct3 = accountRepository.findById(5L).orElseThrow(()->new RuntimeException("Account Not Found"));
+
     }
 }
