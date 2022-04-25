@@ -1,13 +1,28 @@
 package com.example.myspringbootapp;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class LambdaTest {
+
+    @Test
+    public void iterable(){
+        List<User> users = Arrays.asList(new User("test1",11),new User("test2",22),new User("test3",33));
+        users.forEach(u ->{
+            System.out.println(u.toString());
+        });
+        System.out.println();
+        users.forEach(System.out::println);
+    }
+
+
+
+
 
     @Test @Disabled
     public void runnable() throws Exception{
@@ -30,6 +45,7 @@ public class LambdaTest {
         // 구현해야될 함수는 run()밖에 없다.
         Thread t3 = new Thread(() -> System.out.println("simple lambda??"));
         t3.start();
+        // 오류를 발생시킨다!
     }
 
 }
@@ -44,6 +60,7 @@ class Myrunnable implements Runnable{
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 class User {
     private String name;
     private int age;
