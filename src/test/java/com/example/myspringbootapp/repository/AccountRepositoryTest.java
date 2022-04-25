@@ -35,6 +35,7 @@ public class AccountRepositoryTest {
     }
 
     @Test
+    @Disabled
     public void finder() throws Exception{
         Optional<Account> result = accountRepository.findById(1L);
         Account account =result.get();//없는 값이라면 에러가 발생한다.
@@ -49,7 +50,7 @@ public class AccountRepositoryTest {
         log.info("acct2 = {}",acct2);
 
         //orElseThrow( Throeable X )
-        Account acct3 = accountRepository.findById(5L).orElseThrow(()->new RuntimeException("Account Not Found"));
+//        Account acct3 = accountRepository.findById(5L).orElseThrow(()->new RuntimeException("Account Not Found"));
 
     }
 }
