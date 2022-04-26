@@ -10,28 +10,25 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Optional;
 
 @Slf4j
-@SpringBootTest
+//@SpringBootTest
 public class UserRepositoryTest {
-
-    @Autowired
-    UserRepository userRepository;
-
-    @Test
-    @Disabled
-    public void userTest(){
-
-        User user1 = new User();
-        user1.setName("test1");
-        user1.setEmail("test1@test.com");
-        userRepository.save(user1);
-
-        Optional<User> guest = userRepository.findByName("test1");
-        log.info("Guest = {}",guest);
-
-    }
-
-
-
-
+//
+//    @Autowired
+//    UserRepository userRepository;
+//
+//    @Test
+//    @Disabled
+//    public void userTest(){
+//
+//        User user1 = new User();
+//        user1.setName("test1");
+//        user1.setEmail("test1@test.com");
+//        userRepository.save(user1);
+//
+//        Optional<User> guest = userRepository.findByName("test1");
+//        log.info("Guest = {}",guest);
+//
+//    }
+//
 
 }
