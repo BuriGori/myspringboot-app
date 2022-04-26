@@ -8,4 +8,4 @@ spring:
     hibernate:
       ddl-auto: create
 
-DB: 127.0.0.1
+DB: mysqlboot.cmz58cmdxttl.ap-northeast-2.rds.amazonaws.com
