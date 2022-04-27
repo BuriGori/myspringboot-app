@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://${DB}:3306/boot_db?useUnicode=true&charaterEncoding =utf-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mariadb://${DB}:3307/boot_db?useUnicode=true&charaterEncoding =utf-8&useSSL=false&serverTimezone=UTC
     username: boot
     password: boot
     driver-class-name: org.mariadb.jdbc.Driver
@@ -8,4 +8,10 @@ spring:
     hibernate:
       ddl-auto: create
 
-DB: mysqlboot.cmz58cmdxttl.ap-northeast-2.rds.amazonaws.com
+DB: 127.0.0.1
+
+logging:
+  level:
+    com:
+      example:
+        myspringbootapp: warn

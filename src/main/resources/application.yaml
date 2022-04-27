@@ -3,3 +3,7 @@
 spring:
   profiles:
     active: test
+
+logging:
+  file:
+    path: logs
