@@ -9,3 +9,9 @@ spring:
       ddl-auto: update
 
 DB: 127.0.0.1
+
+logging:
+  level:
+    com:
+      example:
+        myspringbootapp: debug
